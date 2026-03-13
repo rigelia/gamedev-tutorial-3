@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var gravity = 200.0
 @export var jump_speed = -300
 @onready var sprite = $AnimatedSprite2D
+@onready var sound = $AudioStreamPlayer
 var JUMP_QUOTA = true
 
 func _physics_process(delta: float) -> void:
@@ -35,11 +36,16 @@ func _physics_process(delta: float) -> void:
 		sprite.flip_h = true
 		if is_on_floor():
 			sprite.play("walk")
+			if not sound.playing and velocity.x != 0:
+				sound.play()
 	elif Input.is_action_pressed("ui_right"):    
 		velocity.x = speed
 		sprite.flip_h = false
 		if is_on_floor():
 			sprite.play("walk")
+			if not sound.playing and velocity.x != 0:
+				sound.play()
+			
 		
 	else:
 		velocity.x = 0

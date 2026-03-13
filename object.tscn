@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://mni4ix07wju1"]
+
+[ext_resource type="Script" uid="uid://bg8j0ejuv6i43" path="res://object.gd" id="1_3xuqs"]
+[ext_resource type="Texture2D" uid="uid://vm5pr4ikjc7v" path="res://assets/kenney_platformercharacters/PNG/Player/Limbs/head_hurt.png" id="2_0i3lm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwaef"]
+size = Vector2(45, 45)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=219945503]
+script = ExtResource("1_3xuqs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1445767763]
+texture = ExtResource("2_0i3lm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=803580985]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_dwaef")

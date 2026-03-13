@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cy8xb6m0ahhtm" path="res://adventurer.gd" id="1_4i3nd"]
 [ext_resource type="Texture2D" uid="uid://d2to1aj6m7mgl" path="res://assets/kenney_platformercharacters/PNG/Adventurer/adventurer_tilesheet.png" id="2_4whkr"]
+[ext_resource type="AudioStream" uid="uid://yh7skyeoj4q6" path="res://assets/footstep_concrete_002.ogg" id="3_4whkr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wu58t"]
 size = Vector2(57, 93)
@@ -86,3 +87,6 @@ shape = SubResource("RectangleShape2D_wu58t")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1327171817]
 sprite_frames = SubResource("SpriteFrames_yxc2p")
 animation = &"jump_2"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2010895221]
+stream = ExtResource("3_4whkr")
